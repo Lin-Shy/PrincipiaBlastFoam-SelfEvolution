@@ -1,0 +1,11 @@
+# Python and local caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Large reproducibility artifacts kept on disk but not suited for normal git backup
+results/e2e_ablation/*/chapter3_evaluation/raw_e2e_runs/
+
+# Downloaded paper PDFs are referenced by catalog/BibTeX and kept locally.
+literature/agent_self_evolution/papers/*.pdf

@@ -1,0 +1,1 @@
+{"id":"chatcmpl-718b28a2-1c67-444c-86f0-47409cff7ffa","object":"chat.completion","created":1780801972,"model":"gpt-image-2","choices":[{"index":0,"message":{"role":"assistant","content":"![image](https://oss.filenest.top/uploads/f218f19c-564d-4330-b455-e38fcf1ea4f5.png)\n\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":80,"completion_tokens":807,"total_tokens":887}}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/data/conda-envs/principia-blastfoam/bin/python",
+    "/data/graduation-projects/PrincipiaBlastFoam/experiments/end2end/run_agent_benchmark.py",
+    "--cases-file",
+    "/data/graduation-projects/experiment_results/agent_skill_evolution/e2e_ablation/chapter4_realistic_concrete_from_chapter3_20260606_065034/chapter3_12case_concrete_verifier_benchmark.json",
+    "--output-root",
+    "/data/graduation-projects/experiment_results/agent_skill_evolution/e2e_ablation/chapter4_realistic_concrete_from_chapter3_20260606_065034/chapter3_evaluation/raw_e2e_runs",
+    "--workflow-timeout",
+    "1200",
+    "--cleanup-interval",
+    "1",
+    "--cleanup-final",
+    "--run-as-user",
+    "openfoam"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 6628.20812702179,
+  "log_path": "/data/graduation-projects/experiment_results/agent_skill_evolution/e2e_ablation/chapter4_realistic_concrete_from_chapter3_20260606_065034/chapter3_evaluation/logs/run_agent_benchmark.log"
+}

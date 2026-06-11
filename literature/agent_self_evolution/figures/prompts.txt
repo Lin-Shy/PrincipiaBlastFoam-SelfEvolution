@@ -1,0 +1,27 @@
+Figure generation prompts
+Generated on: 2026-06-07
+Model: gpt-image-2
+Temperature: 0.2
+Credential note: the API key was used only at runtime and is not stored here.
+
+---
+
+Output file:
+self_evolution_closed_loop.png
+
+Saved API response:
+../data/web/gpt_image_2_probe.json
+
+Prompt:
+Generate a clean scientific schematic image: a closed-loop LLM agent self-evolution pipeline with these labeled stages: task trajectory, failure/success mining, reflection, skill extraction, skill repository, retrieval and injection, next execution, verifier, promote or rollback. White background, publication style, readable labels, no figure number.
+
+---
+
+Output file:
+skill_lifecycle.png
+
+Saved API response:
+../data/web/gpt_image_2_skill_lifecycle.json
+
+Prompt:
+Generate a clean scientific schematic image for an LLM agent skill lifecycle. Show these stages in a loop: raw execution logs and trajectories, screen useful episodes, attribute fault or success cause, distill reusable skill, attach metadata and tests, store in versioned skill repository, retrieve for a new task, inject into agent context, execute held-out task, verifier accepts or rejects, promote version or rollback/quarantine. White background, publication style, readable labels, colorblind-friendly palette, no figure number.

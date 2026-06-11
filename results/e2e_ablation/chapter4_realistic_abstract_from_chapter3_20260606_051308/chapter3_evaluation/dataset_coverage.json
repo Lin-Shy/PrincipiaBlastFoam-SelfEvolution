@@ -1,0 +1,352 @@
+{
+  "created_at": "2026-06-06T05:13:08Z",
+  "total_records": 130,
+  "by_mode": {
+    "basic": 69,
+    "senior": 61
+  },
+  "unique_reference_cases": [
+    "deflagrationToDetonationTransition",
+    "freeField",
+    "internalDetonation_withObstacleAndGlass",
+    "mappedBuilding3D",
+    "movingCone",
+    "reactingParticles",
+    "triplePointShockInteration"
+  ],
+  "reference_case_count": 7,
+  "modified_file_count": 16,
+  "by_reference_case": {
+    "reactingParticles": 28,
+    "freeField": 23,
+    "internalDetonation_withObstacleAndGlass": 21,
+    "deflagrationToDetonationTransition": 20,
+    "movingCone": 17,
+    "triplePointShockInteration": 13,
+    "mappedBuilding3D": 8
+  },
+  "by_reference_case_and_mode": {
+    "basic": {
+      "freeField": 12,
+      "internalDetonation_withObstacleAndGlass": 12,
+      "deflagrationToDetonationTransition": 11,
+      "reactingParticles": 10,
+      "movingCone": 9,
+      "triplePointShockInteration": 9,
+      "mappedBuilding3D": 6
+    },
+    "senior": {
+      "reactingParticles": 18,
+      "freeField": 11,
+      "deflagrationToDetonationTransition": 9,
+      "internalDetonation_withObstacleAndGlass": 9,
+      "movingCone": 8,
+      "triplePointShockInteration": 4,
+      "mappedBuilding3D": 2
+    }
+  },
+  "by_modified_file": {
+    "constant/phaseProperties": 31,
+    "system/controlDict": 24,
+    "system/fvSchemes": 16,
+    "system/blockMeshDict": 11,
+    "constant/turbulenceProperties": 8,
+    "constant/combustionProperties": 6,
+    "system/setFieldsDict": 6,
+    "constant/turbulenceProperties.particles": 6,
+    "building3D/system/controlDict": 5,
+    "constant/dynamicMeshDict": 3,
+    "0/U": 3,
+    "0/U.orig": 3,
+    "system/fvSolution": 3,
+    "constant/turbulenceProperties.gas": 2,
+    "building3D/system/fvSchemes": 2,
+    "building3D/constant/dynamicMeshDict": 1
+  },
+  "by_category": {
+    "time_control_endTime": 15,
+    "phase_properties_other": 12,
+    "mesh_generation": 11,
+    "turbulence_models": 10,
+    "numerical_schemes_other": 10,
+    "output_control": 8,
+    "numerical_flux_schemes": 8,
+    "structural_or_failure": 7,
+    "time_control_maxCo": 6,
+    "initial_conditions": 6,
+    "boundary_or_velocity": 6,
+    "granular_or_particle_stress": 6,
+    "equation_of_state": 5,
+    "combustion_parameters": 4,
+    "adaptive_mesh_refinement": 4,
+    "solver_settings": 3,
+    "reaction_kinetics": 2,
+    "thermodynamics": 2,
+    "multiphase_drag": 2,
+    "heat_transfer": 2,
+    "material_properties": 1
+  },
+  "by_category_and_mode": {
+    "basic": {
+      "time_control_endTime": 15,
+      "mesh_generation": 11,
+      "output_control": 8,
+      "time_control_maxCo": 6,
+      "initial_conditions": 6,
+      "boundary_or_velocity": 6,
+      "combustion_parameters": 4,
+      "turbulence_models": 3,
+      "adaptive_mesh_refinement": 3,
+      "structural_or_failure": 3,
+      "phase_properties_other": 3,
+      "material_properties": 1
+    },
+    "senior": {
+      "numerical_schemes_other": 10,
+      "phase_properties_other": 9,
+      "numerical_flux_schemes": 8,
+      "turbulence_models": 7,
+      "granular_or_particle_stress": 6,
+      "equation_of_state": 5,
+      "structural_or_failure": 4,
+      "solver_settings": 3,
+      "reaction_kinetics": 2,
+      "thermodynamics": 2,
+      "multiphase_drag": 2,
+      "heat_transfer": 2,
+      "adaptive_mesh_refinement": 1
+    }
+  },
+  "top_file_examples": {
+    "constant/phaseProperties": [
+      "freeField_rho0_1700",
+      "internalDetonation_pBurst_100kPa",
+      "internalDetonation_pBurst_30kPa",
+      "internalDetonation_pBurst_50kPa",
+      "reactingParticles_diameter_0.5mm"
+    ],
+    "system/controlDict": [
+      "deflagrationToDetonationTransition_endTime_15e-3",
+      "deflagrationToDetonationTransition_endTime_30e-3",
+      "deflagrationToDetonationTransition_maxCo_0.4",
+      "deflagrationToDetonationTransition_writeInterval_2e-4",
+      "freeField_endTime_0.0003"
+    ],
+    "system/fvSchemes": [
+      "deflagrationToDetonationTransition_fluxScheme_AUSM",
+      "deflagrationToDetonationTransition_reconstruct_MUSCL",
+      "deflagrationToDetonationTransition_timeIntegrator_RK2SSP",
+      "freeField_fluxScheme_HLLC",
+      "freeField_gradScheme_Gauss_linear"
+    ],
+    "system/blockMeshDict": [
+      "deflagrationToDetonationTransition_mesh_x_4000",
+      "deflagrationToDetonationTransition_mesh_y_40",
+      "freeField_mesh_15x15x15",
+      "freeField_mesh_20x20x20",
+      "internalDetonation_mesh_30x15x8"
+    ],
+    "constant/turbulenceProperties": [
+      "deflagrationToDetonationTransition_SpalartAllmaras",
+      "movingCone_laminar",
+      "deflagrationToDetonationTransition_turbulence_kEpsilon",
+      "deflagrationToDetonationTransition_turbulence_kOmegaSST",
+      "deflagrationToDetonationTransition_turbulence_laminar"
+    ],
+    "constant/combustionProperties": [
+      "deflagrationToDetonationTransition_Su_0.35",
+      "deflagrationToDetonationTransition_Su_0.5",
+      "deflagrationToDetonationTransition_equivalenceRatio_0.8",
+      "deflagrationToDetonationTransition_equivalenceRatio_1.2",
+      "deflagrationToDetonationTransition_reactionModel_Arrhenius"
+    ],
+    "constant/turbulenceProperties.particles": [
+      "reactingParticles_conductivity_Gidaspow",
+      "reactingParticles_frictionalPressure_Johnson",
+      "reactingParticles_frictionalViscosity_Schaeffer",
+      "reactingParticles_granularPressure_Lun",
+      "reactingParticles_granularViscosity_HrenyaSinclair"
+    ],
+    "system/setFieldsDict": [
+      "freeField_charge_100kg",
+      "freeField_charge_50kg",
+      "internalDetonation_chargeLocation_0.3_0.5_0.5",
+      "internalDetonation_chargeLocation_1.0_0.5_0.5",
+      "reactingParticles_particleDistribution_shifted"
+    ],
+    "building3D/system/controlDict": [
+      "mappedBuilding3D_endTime_0.002",
+      "mappedBuilding3D_endTime_0.003",
+      "mappedBuilding3D_maxCo_0.3",
+      "mappedBuilding3D_maxCo_0.4",
+      "mappedBuilding3D_writeInterval_2.5e-5"
+    ],
+    "0/U": [
+      "movingCone_velocity_300",
+      "movingCone_velocity_500",
+      "movingCone_velocity_600"
+    ],
+    "0/U.orig": [
+      "triplePointShockInteration_mach_1.5",
+      "triplePointShockInteration_mach_2.0",
+      "triplePointShockInteration_mach_2.5"
+    ],
+    "constant/dynamicMeshDict": [
+      "freeField_maxRefinement_2",
+      "freeField_maxRefinement_4",
+      "movingCone_motionSolver_velocityLaplacian"
+    ],
+    "system/fvSolution": [
+      "movingCone_nCorrectors_3",
+      "movingCone_solver_GAMG",
+      "reactingParticles_solver_smoothSolver"
+    ],
+    "building3D/system/fvSchemes": [
+      "mappedBuilding3D_fluxScheme_AUSM",
+      "mappedBuilding3D_timeIntegrator_RK3SSP"
+    ],
+    "constant/turbulenceProperties.gas": [
+      "reactingParticles_kOmegaSST",
+      "reactingParticles_turbulence_kOmega"
+    ],
+    "building3D/constant/dynamicMeshDict": [
+      "mappedBuilding3D_maxRefinement_3"
+    ]
+  },
+  "category_examples": {
+    "time_control_endTime": [
+      "deflagrationToDetonationTransition_endTime_15e-3",
+      "deflagrationToDetonationTransition_endTime_30e-3",
+      "freeField_endTime_0.0003",
+      "freeField_endTime_0.001",
+      "internalDetonation_endTime_0.003"
+    ],
+    "phase_properties_other": [
+      "reactingParticles_diameter_0.5mm",
+      "reactingParticles_diameter_2mm",
+      "reactingParticles_diameter_3mm",
+      "freeField_activation_programmedIgnition",
+      "internalDetonation_damageModel_progressive"
+    ],
+    "mesh_generation": [
+      "deflagrationToDetonationTransition_mesh_x_4000",
+      "deflagrationToDetonationTransition_mesh_y_40",
+      "freeField_mesh_15x15x15",
+      "freeField_mesh_20x20x20",
+      "internalDetonation_mesh_30x15x8"
+    ],
+    "numerical_schemes_other": [
+      "deflagrationToDetonationTransition_reconstruct_MUSCL",
+      "deflagrationToDetonationTransition_timeIntegrator_RK2SSP",
+      "freeField_gradScheme_Gauss_linear",
+      "freeField_reconstruct_QUICK",
+      "freeField_timeIntegrator_RK3SSP"
+    ],
+    "turbulence_models": [
+      "deflagrationToDetonationTransition_SpalartAllmaras",
+      "movingCone_laminar",
+      "reactingParticles_kOmegaSST",
+      "deflagrationToDetonationTransition_turbulence_kEpsilon",
+      "deflagrationToDetonationTransition_turbulence_kOmegaSST"
+    ],
+    "numerical_flux_schemes": [
+      "deflagrationToDetonationTransition_fluxScheme_AUSM",
+      "freeField_fluxScheme_HLLC",
+      "internalDetonation_fluxScheme_AUSM",
+      "mappedBuilding3D_fluxScheme_AUSM",
+      "movingCone_fluxScheme_Kurganov"
+    ],
+    "output_control": [
+      "deflagrationToDetonationTransition_writeInterval_2e-4",
+      "freeField_writeInterval_2e-5",
+      "freeField_writeInterval_5e-6",
+      "internalDetonation_writeInterval_5e-5",
+      "mappedBuilding3D_writeInterval_2.5e-5"
+    ],
+    "structural_or_failure": [
+      "internalDetonation_pBurst_100kPa",
+      "internalDetonation_pBurst_30kPa",
+      "internalDetonation_pBurst_50kPa",
+      "internalDetonation_fractureModel_principalStrain",
+      "internalDetonation_fractureModel_principalStress"
+    ],
+    "boundary_or_velocity": [
+      "movingCone_velocity_300",
+      "movingCone_velocity_500",
+      "movingCone_velocity_600",
+      "triplePointShockInteration_mach_1.5",
+      "triplePointShockInteration_mach_2.0"
+    ],
+    "granular_or_particle_stress": [
+      "reactingParticles_conductivity_Gidaspow",
+      "reactingParticles_frictionalPressure_Johnson",
+      "reactingParticles_frictionalViscosity_Schaeffer",
+      "reactingParticles_granularPressure_Lun",
+      "reactingParticles_granularViscosity_HrenyaSinclair"
+    ],
+    "initial_conditions": [
+      "freeField_charge_100kg",
+      "freeField_charge_50kg",
+      "internalDetonation_chargeLocation_0.3_0.5_0.5",
+      "internalDetonation_chargeLocation_1.0_0.5_0.5",
+      "reactingParticles_particleDistribution_shifted"
+    ],
+    "time_control_maxCo": [
+      "deflagrationToDetonationTransition_maxCo_0.4",
+      "freeField_maxCo_0.6",
+      "internalDetonation_maxCo_0.25",
+      "internalDetonation_maxCo_0.4",
+      "mappedBuilding3D_maxCo_0.3"
+    ],
+    "equation_of_state": [
+      "freeField_eos_BKW",
+      "freeField_eos_JWL",
+      "freeField_eos_LSZK",
+      "freeField_eos_StiffenedGas",
+      "freeField_eos_rhoConst"
+    ],
+    "adaptive_mesh_refinement": [
+      "freeField_maxRefinement_2",
+      "freeField_maxRefinement_4",
+      "mappedBuilding3D_maxRefinement_3",
+      "movingCone_motionSolver_velocityLaplacian"
+    ],
+    "combustion_parameters": [
+      "deflagrationToDetonationTransition_Su_0.35",
+      "deflagrationToDetonationTransition_Su_0.5",
+      "deflagrationToDetonationTransition_equivalenceRatio_0.8",
+      "deflagrationToDetonationTransition_equivalenceRatio_1.2"
+    ],
+    "solver_settings": [
+      "movingCone_nCorrectors_3",
+      "movingCone_solver_GAMG",
+      "reactingParticles_solver_smoothSolver"
+    ],
+    "heat_transfer": [
+      "reactingParticles_heatTransfer_Gunn",
+      "reactingParticles_heatTransfer_RanzMarshall"
+    ],
+    "multiphase_drag": [
+      "reactingParticles_dragModel_Ergun",
+      "reactingParticles_dragModel_Gidaspow"
+    ],
+    "reaction_kinetics": [
+      "deflagrationToDetonationTransition_reactionModel_Arrhenius",
+      "deflagrationToDetonationTransition_reactionModel_infinitelyFast"
+    ],
+    "thermodynamics": [
+      "deflagrationToDetonationTransition_thermo_eConst",
+      "freeField_thermo_janaf"
+    ],
+    "material_properties": [
+      "freeField_rho0_1700"
+    ]
+  },
+  "coverage_observations": [
+    "Dataset covers 130 modification tasks: 69 basic and 61 senior.",
+    "The most represented reference case is reactingParticles (28 tasks).",
+    "The most frequent target file is constant/phaseProperties (31 tasks).",
+    "The most frequent inferred modification category is time_control_endTime (15 tasks).",
+    "Low-frequency categories need careful interpretation: heat_transfer, material_properties, multiphase_drag, reaction_kinetics, thermodynamics."
+  ]
+}
