@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Chapter 4 skill-injected E2E ablations on the Chapter 3 benchmark.
+"""Run Chapter 4 skill-injected E2E ablations on the realistic benchmark.
 
 The script does not modify Hermes or PrincipiaBlastFoam source code. It creates
 benchmark files whose user requests are prefixed with retrieved skills, then
@@ -24,11 +24,12 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 GRADUATION_PROJECTS_ROOT = PROJECT_ROOT.parent
 EXPERIMENT_RESULTS_ROOT = GRADUATION_PROJECTS_ROOT / "experiment_results"
 CHAPTER3_EVALUATION_ROOT = EXPERIMENT_RESULTS_ROOT / "chapter3_end_to_end_evaluation"
-DEFAULT_CHAPTER3_CASES = PROJECT_ROOT / "benchmarks" / "chapter4_realistic_application_benchmark.json"
+CHAPTER4_RESULTS_ROOT = EXPERIMENT_RESULTS_ROOT / "chapter4_self_evolution"
+DEFAULT_BENCHMARK_CASES = CHAPTER4_RESULTS_ROOT / "benchmarks" / "chapter4_realistic_application_benchmark.json"
 DEFAULT_CHAPTER3_EVALUATOR = CHAPTER3_EVALUATION_ROOT / "scripts" / "run_chapter3_full_evaluation.py"
-DEFAULT_CONCRETE_SKILLS = PROJECT_ROOT / "skills" / "chapter3_tutorial_concrete_skill_library.json"
-DEFAULT_ABSTRACT_SKILLS = PROJECT_ROOT / "skills" / "chapter3_tutorial_abstract_skill_library.json"
-DEFAULT_RESULTS_ROOT = PROJECT_ROOT / "results" / "e2e_ablation"
+DEFAULT_CONCRETE_SKILLS = CHAPTER4_RESULTS_ROOT / "skills" / "chapter3_tutorial_concrete_skill_library.json"
+DEFAULT_ABSTRACT_SKILLS = CHAPTER4_RESULTS_ROOT / "skills" / "chapter3_tutorial_abstract_skill_library.json"
+DEFAULT_RESULTS_ROOT = CHAPTER4_RESULTS_ROOT / "e2e_ablation"
 DEFAULT_PYTHON = Path("/data/miniconda3/bin/python")
 TOKEN_RE = re.compile(r"[A-Za-z0-9_./+-]+|[\u4e00-\u9fff]{2,}")
 
@@ -206,7 +207,7 @@ def build_cases_payload(
         "created_at": utc_now(),
         "condition": condition,
         "top_k": top_k,
-        "source_benchmark": str(DEFAULT_CHAPTER3_CASES),
+        "source_benchmark": str(DEFAULT_BENCHMARK_CASES),
         "selected_case_ids": [str(case.get("id")) for case in generated_cases],
         "case_count": len(generated_cases),
         "retrieval_rows": retrieval_rows,
@@ -263,7 +264,13 @@ def run_chapter3_evaluator(args: argparse.Namespace, cases_file: Path, results_d
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate and optionally run Chapter 4 skill-injected E2E ablations.")
     parser.add_argument("--condition", choices=["no_skill", "concrete", "concrete_verifier", "abstract"], default="abstract")
-    parser.add_argument("--chapter3-cases", type=Path, default=DEFAULT_CHAPTER3_CASES)
+    parser.add_argument(
+        "--benchmark-cases",
+        "--chapter3-cases",
+        dest="benchmark_cases",
+        type=Path,
+        default=DEFAULT_BENCHMARK_CASES,
+    )
     parser.add_argument("--chapter3-evaluator", type=Path, default=DEFAULT_CHAPTER3_EVALUATOR)
     parser.add_argument("--concrete-skills", type=Path, default=DEFAULT_CONCRETE_SKILLS)
     parser.add_argument("--abstract-skills", type=Path, default=DEFAULT_ABSTRACT_SKILLS)
@@ -286,9 +293,9 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    base_payload = load_json(args.chapter3_cases, {})
+    base_payload = load_json(args.benchmark_cases, {})
     if not base_payload.get("cases"):
-        raise SystemExit(f"No cases found in {args.chapter3_cases}")
+        raise SystemExit(f"No cases found in {args.benchmark_cases}")
     case_ids = split_case_ids([args.case_ids, *args.case_id])
 
     if args.condition == "abstract":
@@ -306,7 +313,7 @@ def main() -> None:
     }[args.condition]
     output_dir = args.results_root / f"{condition_slug}_{run_id()}"
     payload = build_cases_payload(base_payload, skills, args.condition, args.top_k, args.limit, case_ids)
-    cases_file = output_dir / f"chapter3_{len(payload['cases'])}case_{args.condition}_benchmark.json"
+    cases_file = output_dir / f"chapter4_{len(payload['cases'])}case_{args.condition}_benchmark.json"
     write_json(cases_file, payload)
 
     response = {
