@@ -8,8 +8,8 @@ tree.
 ## Boundaries
 
 - Base system code: `../PrincipiaBlastFoam/`
-- Chapter 3 baseline evidence: `../experiment_results/chapter3_end_to_end_evaluation/`
-- Chapter 4 experiment assets: `../experiment_results/chapter4_self_evolution/`
+- Chapter 3 baseline evidence: `../graduation-experiment-results/chapter3_end_to_end_evaluation/`
+- Chapter 4 experiment assets: `../graduation-experiment-results/chapter4_self_evolution/`
 - Thesis literature and writing assets: `/data/graduation-docs/`
 
 ## Code Layout
@@ -27,7 +27,7 @@ Regenerate Chapter 4 skills:
 
 ```bash
 /data/miniconda3/bin/python scripts/ingest_chapter3_tutorial_failures.py \
-  --chapter3-result-dir ../experiment_results/chapter3_end_to_end_evaluation/results/model_runs/deepseek-v4-pro/chapter3_tutorial_modification_20260605_20260606/B_short_30
+  --chapter3-result-dir ../graduation-experiment-results/chapter3_end_to_end_evaluation/results/model_runs/deepseek-v4-pro/chapter3_tutorial_modification_20260605_20260606/B_short_30
 ```
 
 Run the concrete-verifier-skill group:

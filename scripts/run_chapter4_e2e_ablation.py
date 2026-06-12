@@ -22,7 +22,7 @@ from typing import Any, Dict, Iterable, List, Sequence, Tuple
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 GRADUATION_PROJECTS_ROOT = PROJECT_ROOT.parent
-EXPERIMENT_RESULTS_ROOT = GRADUATION_PROJECTS_ROOT / "experiment_results"
+EXPERIMENT_RESULTS_ROOT = GRADUATION_PROJECTS_ROOT / "graduation-experiment-results"
 CHAPTER3_EVALUATION_ROOT = EXPERIMENT_RESULTS_ROOT / "chapter3_end_to_end_evaluation"
 CHAPTER4_RESULTS_ROOT = EXPERIMENT_RESULTS_ROOT / "chapter4_self_evolution"
 DEFAULT_BENCHMARK_CASES = CHAPTER4_RESULTS_ROOT / "benchmarks" / "chapter4_realistic_application_benchmark.json"

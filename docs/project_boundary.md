@@ -8,9 +8,9 @@ thesis writing assets.
 
 - Chapter 4 code: `/data/graduation-projects/PrincipiaBlastFoam-SelfEvolution/`
 - Chapter 4 benchmark, skills, results, reports:
-  `/data/graduation-projects/experiment_results/chapter4_self_evolution/`
+  `/data/graduation-projects/graduation-experiment-results/chapter4_self_evolution/`
 - Chapter 3 baseline evidence:
-  `/data/graduation-projects/experiment_results/chapter3_end_to_end_evaluation/`
+  `/data/graduation-projects/graduation-experiment-results/chapter3_end_to_end_evaluation/`
 - Thesis literature, drafts, final figures, and writing assets:
   `/data/graduation-docs/`
 
